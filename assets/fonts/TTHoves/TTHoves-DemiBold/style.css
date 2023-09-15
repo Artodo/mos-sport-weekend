@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'TT Hoves';
+    src: local('TT Hoves DemiBold'), local('TT-Hoves-DemiBold'),
+        url('TTHoves-DemiBold.woff2') format('woff2'),
+        url('TTHoves-DemiBold.woff') format('woff'),
+        url('TTHoves-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
