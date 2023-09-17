@@ -10,8 +10,46 @@
 </head>
 
 <body>
+  <header class="header">
+    <div class="header__wrapper">
+      <div class="header__logos">
+        <img src="./assets/img/logo-header.svg" alt="logo">
+        <img src="./assets/img/my-doc-header.svg" alt="logo">
+      </div>
+      <div class="header__btn" id="burgerBtn">
+        <sapn class="header__btn-line bar1"></sapn>
+        <sapn class="header__btn-line bar2"></sapn>
+        <sapn class="header__btn-line bar3"></sapn>
+      </div>
+    </div>
+  </header>
+  <div class="burger-menu" id="burgerMenu">
+    <ul class="burger-menu__list">
+      <li class="burger-menu__item">О событии</li>
+      <li class="burger-menu__item">звездные гости</li>
+      <li class="burger-menu__item">расписание</li>
+      <li class="burger-menu__item">карта локаций</li>
+    </ul>
+    <hr>
+    <div class="burger-menu__links">
+      <a class="burger-menu__link" href="https://rutube.ru/feeds/new_main_page/?ysclid=lmiuuttisg686028796"><img src="./assets/img/footer/rutube.png" alt="ruTube"></a>
+      <a class="burger-menu__link" href="https://web.telegram.org/a/"><img src="./assets/img/footer/telegram.png" alt="Телеграм"></a>
+      <a class="burger-menu__link" href="https://vk.com/?ysclid=lmiuy0u81n48846358"><img src="./assets/img/footer/vk.png" alt="В контакте"></a>
+    </div>
+    <div class="about-event__details">
+      <p class="burger-menu__date">5-6 августа
+        <span class="about-event__time">12:00—20:00</span>
+      </p>
+      <p class="burger-menu__place">
+        <span class="pinkcolor">CK «Лужники»</span>,<br> Южный спортивный центр
+      </p>
+    </div>
+    <button type="button" class="burger-menu__btn" id="join">Присоединиться</button>
+    
+  </div>
   <section class="first-screen">
     <div class="container">
+
       <div class="banner">
         <img src="./assets/img/people-first-screen.png" alt="man and woman" class="banner__img">
         <h1 class="banner__title">Фестиваль cпортивные выходные</h1>
@@ -49,81 +87,81 @@
             </h2>
             <p class="stars__text">Все звезды на одной площадке! Выбирайте, с кем делать зарядку, тянуться, прокачивать мышцы и даже танцевать. Регистрируйтесь,чтобы принять участие в марафоне тренировок и разделить эмоции с любимыми артистами. </p>
           </div>
-          <div>
+          <div class="stars__btns">
             <button type="button" class="stars__btn" id="join">Присоединиться</button>
             <div class="swiper__btns">
               <button type="button" class="swiper-button-prev"><img src="./assets/img/arrow-prev.png" alt="arrow"></button>
               <button type="button" class="swiper-button-next"><img src="./assets/img/arrow-next.png" alt="arrow"></button></div>
           </div>
         </div>
-        
+
       </div>
-     
+
     </div>
-     <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./assets/img/faces/face1.png" alt="face" class="swiper__img">
-              <p class="swiper__name">Имя Фамилия</p>
-              <p class="swiper__description little-text">Кто такой?</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/faces/face2.png" alt="face" class="swiper__img">
-              <p class="swiper__name">Имя Фамилия</p>
-              <p class="swiper__description little-text">Кто такой?</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/faces/face3.png" alt="face" class="swiper__img">
-              <p class="swiper__name">Имя Фамилия</p>
-              <p class="swiper__description little-text">Кто такой?</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/faces/face4.png" alt="face" class="swiper__img">
-              <p class="swiper__name">Имя Фамилия</p>
-              <p class="swiper__description little-text">Кто такой?</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/faces/face2.png" alt="face" class="swiper__img">
-              <p class="swiper__name">Имя Фамилия</p>
-              <p class="swiper__description little-text">Кто такой?</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/faces/face3.png" alt="face" class="swiper__img">
-              <p class="swiper__name">Имя Фамилия</p>
-              <p class="swiper__description little-text">Кто такой?</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/faces/face1.png" alt="face" class="swiper__img">
-              <p class="swiper__name">Имя Фамилия</p>
-              <p class="swiper__description little-text">Кто такой?</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/faces/face2.png" alt="face" class="swiper__img">
-              <p class="swiper__name">Имя Фамилия</p>
-              <p class="swiper__description little-text">Кто такой?</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/faces/face3.png" alt="face" class="swiper__img">
-              <p class="swiper__name">Имя Фамилия</p>
-              <p class="swiper__description little-text">Кто такой?</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/faces/face4.png" alt="face" class="swiper__img">
-              <p class="swiper__name">Имя Фамилия</p>
-              <p class="swiper__description little-text">Кто такой?</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/faces/face2.png" alt="face" class="swiper__img">
-              <p class="swiper__name">Имя Фамилия</p>
-              <p class="swiper__description little-text">Кто такой?</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/faces/face3.png" alt="face" class="swiper__img">
-              <p class="swiper__name">Имя Фамилия</p>
-              <p class="swiper__description little-text">Кто такой?</p>
-            </div>
-          </div>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./assets/img/faces/face1.png" alt="face" class="swiper__img">
+          <p class="swiper__name">Имя Фамилия</p>
+          <p class="swiper__description little-text">Кто такой?</p>
         </div>
+        <div class="swiper-slide">
+          <img src="./assets/img/faces/face2.png" alt="face" class="swiper__img">
+          <p class="swiper__name">Имя Фамилия</p>
+          <p class="swiper__description little-text">Кто такой?</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/img/faces/face3.png" alt="face" class="swiper__img">
+          <p class="swiper__name">Имя Фамилия</p>
+          <p class="swiper__description little-text">Кто такой?</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/img/faces/face4.png" alt="face" class="swiper__img">
+          <p class="swiper__name">Имя Фамилия</p>
+          <p class="swiper__description little-text">Кто такой?</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/img/faces/face2.png" alt="face" class="swiper__img">
+          <p class="swiper__name">Имя Фамилия</p>
+          <p class="swiper__description little-text">Кто такой?</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/img/faces/face3.png" alt="face" class="swiper__img">
+          <p class="swiper__name">Имя Фамилия</p>
+          <p class="swiper__description little-text">Кто такой?</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/img/faces/face1.png" alt="face" class="swiper__img">
+          <p class="swiper__name">Имя Фамилия</p>
+          <p class="swiper__description little-text">Кто такой?</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/img/faces/face2.png" alt="face" class="swiper__img">
+          <p class="swiper__name">Имя Фамилия</p>
+          <p class="swiper__description little-text">Кто такой?</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/img/faces/face3.png" alt="face" class="swiper__img">
+          <p class="swiper__name">Имя Фамилия</p>
+          <p class="swiper__description little-text">Кто такой?</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/img/faces/face4.png" alt="face" class="swiper__img">
+          <p class="swiper__name">Имя Фамилия</p>
+          <p class="swiper__description little-text">Кто такой?</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/img/faces/face2.png" alt="face" class="swiper__img">
+          <p class="swiper__name">Имя Фамилия</p>
+          <p class="swiper__description little-text">Кто такой?</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/img/faces/face3.png" alt="face" class="swiper__img">
+          <p class="swiper__name">Имя Фамилия</p>
+          <p class="swiper__description little-text">Кто такой?</p>
+        </div>
+      </div>
+    </div>
   </section>
   <section class="fourth-screen">
     <div class="container">
@@ -379,7 +417,7 @@
     <div class="container">
       <div class="social-banner">
         <img src="./assets/img/women.png" alt="women" class="social-banner__img">
-        <h2 class="social-banner__title">а ты идешь?</h1>
+        <h2 class="social-banner__title">а ты идешь?</h2>
           <div class="social-banner__content">
             <p class="social-banner__text">Подпишись и присоединяйся<br> к комьюнити людей, любящих спорт</p>
             <div class="social-banner__btns">

@@ -1,6 +1,10 @@
 @import "fonts";
 @import "_reset";
 @import "_vars";
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -29,6 +33,131 @@ img {
 .container {
   max-width: $xl;
   margin: 0 auto;
+}
+
+.header {
+  background-color: #ffffff;
+  &__wrapper {
+    max-width: $x4;
+    padding: 23px 32px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logos {
+    width: 55%;
+  }
+  &__logos>img {
+    padding-right: 36px;
+  }
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(228, 0, 57, 1);
+  }
+  &__btn-line {
+    margin-top: 2px;
+    display: inline-block;
+    width: 18px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #ffffff;
+  }
+}
+
+.burger-menu {
+  display: none;
+  padding-left: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  width: 375px;
+  height: 100vw;
+  background: rgba(242, 243, 245, 1);
+  &__list {
+    font-family: $text-font;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 19% 0 0 0;
+    // height: 63%;
+  }
+  &__item {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  &__links {
+    margin: 35px 0 81px 0;
+    display: flex;
+  }
+  &__link {
+    opacity: 0.6;
+    filter: brightness(0);
+    margin-right: 5px;
+    width: 35px;
+    border: 1px solid rgba(142, 142, 142, 1);
+    padding: 10px;
+    border-radius: 12px;
+  }
+  &__btn {
+    @include bgpink;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 48px;
+    color: rgba(255, 255, 255, 1);
+    border-radius: 32px;
+    padding: 0 20px;
+  }
+  &__place {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.85px;
+    margin: 15px 0 40px 0;
+  }
+  &__date {
+    max-width: 120px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+  }
+}
+
+hr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.active {
+  display: block;
+}
+
+.burger_btn-active {
+  border-radius: 50%;
+  transition: all 0.6s;
+  position: relative;
+  z-index: 51;
+  .bar1 {
+    position: absolute;
+    transform: rotate(135deg);
+    transition: all 0.9s;
+  }
+  .bar2 {
+    background: transparent;
+  }
+  .bar3 {
+    position: absolute;
+    transform: rotate(-135deg);
+    transition: all 0.9s;
+  }
+}
+
+.noScroll {
+  overflow: hidden;
 }
 
 .first-screen {
@@ -116,7 +245,6 @@ h2 {
     font-size: 16px;
     font-weight: 500;
     line-height: 18.85px;
-    letter-spacing: 7%;
   }
   &__text {
     max-width: 67%;
@@ -502,10 +630,11 @@ h2 {
     height: auto;
     width: 333px;
     padding: 14px 16px;
-    &>span {
-      font-size: 16px;
-      padding: 12px 20px;
-    }
+  }
+  .timetable__date {
+    font-size: 16px;
+    padding: 12px 20px;
+    width: auto;
   }
   .social-banner__img {
     left: -10%;
@@ -584,6 +713,9 @@ h2 {
   .container {
     max-width: $x4;
   }
+  .little-text {
+    font-size: 14px;
+  }
   .footer__social-media {
     flex-wrap: wrap;
   }
@@ -597,6 +729,11 @@ h2 {
     padding: 50px 0;
     &__subtitle {
       font-size: 16px;
+    }
+    &__event-info {
+      padding: 0;
+      justify-content: space-evenly;
+      margin-left: 20px;
     }
     &__title {
       font-size: 36px;
@@ -613,6 +750,12 @@ h2 {
     &__tab:last-child {
       margin-right: 0;
     }
+    &__event-name {
+      font-size: 16px;
+    }
+    &__time {
+      font-size: 14px;
+    }
   }
   .social-banner__img {
     max-width: 531px;
@@ -623,24 +766,77 @@ h2 {
   .social-banner__title {
     left: 45%;
     font-size: calc(40px + (16 + 16 *0.7) * ((100vw - 375px) / 500));
-
+  }
+  .banner__img {
+    max-width: 631px;
   }
 }
 
 @media screen and (max-width: 576px) {
   .container {
     max-width: $x4;
-    padding: 16px;
+    padding: 0 16px;
   }
-  .social-banner__title{
-    left: 2%;
-    top: 24px;
+  .arrow {
+    width: 42px;
+    height: 42px;
   }
-  .seventh-screen {
-    background-color: rgba(25, 25, 26, 1);
-    padding: 48px 0 32px 0;
+
+  .swiper{
+    padding: 0;
+    margin: 20px 0 70px 0;
   }
-  .circle{display: none;}
+  .stars {
+    padding: 0;
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__content {}
+    &__text {
+      font-size: 14px;
+      line-height: 21px;
+    }
+    &__btns{
+      display: flex;
+      justify-content: space-between;
+    }
+    &__btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      line-height: 28px;
+      margin: 0;
+    }
+    &__text{
+      margin: 20px 0 30px 0;
+    }
+  }
+
+  .swiper__btns {
+    margin: 0;
+    height: 48px;
+  }
+  .about-event {
+    &__wrapper {
+      flex-direction: column;
+      padding: 60px 0;
+    }
+    &__date {
+      font-size: 22px;
+      margin: 30px 0 20px 0;
+    }
+    &__place {
+      margin-bottom: 14px;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.2px;
+    }
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 37.7px;
+  }
   .footer {
     &__sponsors {
       grid-template-columns: repeat(2, 1fr);
@@ -655,17 +851,78 @@ h2 {
     &__mail-us {
       margin-bottom: 28px;
     }
-    &__text{
+    &__text {
       flex-direction: column;
       margin-top: 28px;
     }
-    &__confidentiality-policy{
+    &__confidentiality-policy {
       margin-bottom: 24px;
       text-align: center;
       line-height: 20px;
     }
-    &__confidentiality-policy > a{
+    &__confidentiality-policy>a {
       display: block;
     }
+  }
+  .social-banner {
+    padding: 391px 0 156px;
+    &__title {
+      left: 2%;
+      top: 24px;
+    }
+    &__text {
+      position: relative;
+      top: -189px;
+      left: -301px;
+    }
+    &__btns {
+      flex-direction: column;
+    }
+    &__btn {
+      margin-top: 8px;
+    }
+    &__img {
+      left: 15%;
+    }
+  }
+  .seventh-screen {
+    background-color: rgba(25, 25, 26, 1);
+    padding: 48px 0 32px 0;
+  }
+  .circle {
+    display: none;
+  }
+  .timetable {
+    padding: 32px 0;
+    &__date {
+      padding: 7px 20px;
+    }
+    &__title {
+      line-height: 42px;
+    }
+    &__subtitle {
+      letter-spacing: 0;
+    }
+    &__event {
+      padding: 14px 16px;
+    }
+    &__img {
+      max-width: 85px;
+    }
+    &__event-name {
+      font-size: 14px;
+    }
+    &__time {
+      font-size: 12px;
+    }
+    &__tab {
+      margin-bottom: 14px;
+    }
+    &__events {
+      margin-top: 22px;
+    }
+  }
+  .little-text {
+    font-size: 12px;
   }
 }

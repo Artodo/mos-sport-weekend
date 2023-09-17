@@ -1,4 +1,41 @@
 'use strict'
+const menuBtn = document.querySelector('#burgerBtn');
+const menu = document.querySelector('#burgerMenu');
+const body = document.body;
+
+
+function closeBurgerMenu() {
+  menuBtn.classList.remove('burger_btn-active');
+  menu.classList.remove('active');
+}
+
+function isMenuOpen() {
+  return menu.classList.contains("active") && menuBtn.classList.contains("active");
+}
+
+menuBtn.addEventListener('click', function () {
+  menuBtn.classList.toggle('burger_btn-active');
+  menu.classList.toggle('active');
+  document.body.classList.toggle('noScroll');
+})
+
+body.addEventListener('click', function (e) {
+  if (isMenuOpen()) {
+    if (!e.target.classList.contains("burger-menu") && !e.target.classList.contains("header__btn") && !e.target.classList.contains("bar1") && !e.target.classList.contains("bar2") && !e.target.classList.contains("bar3")) {
+      closeBurgerMenu();
+    }
+  }
+})
+
+const anchors = document.querySelectorAll('.burger-menu__item');
+
+anchors.forEach(anchor => {
+  anchor.addEventListener('click', () => {
+    closeBurgerMenu();
+    document.body.classList.remove('noScroll');
+  })
+})
+
 console.log("Hi");
 
 const swiper = new Swiper('.swiper', {
@@ -6,26 +43,49 @@ const swiper = new Swiper('.swiper', {
   slidesPerView: 4.5,
   spaceBetween: 20,
   
-
-  
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
   
-  
+
   breakpoints: {
+    320:{
+      slidesPerView: 1
+    },
     576: {
-      slidesPerView: 1,
+      slidesPerView: 3,
+      spaceBetween: 14
     },
   
     992: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 14
     }
   }
 
 });
+
+
+// breakpoints: {
+//   // when window width is >= 320px
+//   320: {
+//     slidesPerView: 2,
+//     spaceBetween: 20
+//   },
+//   // when window width is >= 480px
+//   480: {
+//     slidesPerView: 3,
+//     spaceBetween: 30
+//   },
+//   // when window width is >= 640px
+//   640: {
+//     slidesPerView: 4,
+//     spaceBetween: 40
+//   }
+// }
+
+
 
 function handleTabClick(tab) {
 removeActiveFromTabs();
