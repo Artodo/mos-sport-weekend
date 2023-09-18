@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мосспорт-Спортивные-выходные</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <link rel="stylesheet" href="./assets/styles/index.css">
 </head>
 
@@ -13,22 +13,27 @@
   <header class="header">
     <div class="header__wrapper">
       <div class="header__logos">
-        <img src="./assets/img/logo-header.svg" alt="logo">
-        <img src="./assets/img/my-doc-header.svg" alt="logo">
+        <div>
+          <img class="header__logo" src="./assets/img/logo-header.svg" alt="logo">
+        </div>
+        <div>
+          <img src="./assets/img/my-doc-header.svg" alt="logo">
+        </div>
       </div>
       <div class="header__btn" id="burgerBtn">
-        <sapn class="header__btn-line bar1"></sapn>
-        <sapn class="header__btn-line bar2"></sapn>
-        <sapn class="header__btn-line bar3"></sapn>
+        <span class="header__btn-line bar1"></span>
+        <span class="header__btn-line bar2"></span>
+        <span class="header__btn-line bar3"></span>
       </div>
     </div>
   </header>
   <div class="burger-menu" id="burgerMenu">
+    <img class="burger-menu__logo" src="./assets/img/logo-header.svg" alt="logo">
     <ul class="burger-menu__list">
-      <li class="burger-menu__item">О событии</li>
-      <li class="burger-menu__item">звездные гости</li>
-      <li class="burger-menu__item">расписание</li>
-      <li class="burger-menu__item">карта локаций</li>
+      <li class="burger-menu__item"><a href="#about">О событии</a></li>
+      <li class="burger-menu__item"><a href="#stars">звездные гости</a></li>
+      <li class="burger-menu__item"><a href="#timetable">расписание</a></li>
+      <li class="burger-menu__item"><a href="#">карта локаций</a></li>
     </ul>
     <hr>
     <div class="burger-menu__links">
@@ -44,8 +49,8 @@
         <span class="pinkcolor">CK «Лужники»</span>,<br> Южный спортивный центр
       </p>
     </div>
-    <button type="button" class="burger-menu__btn" id="join">Присоединиться</button>
-    
+    <button type="button" class="burger-menu__btn" id="joinHeader">Присоединиться</button>
+
   </div>
   <section class="first-screen">
     <div class="container">
@@ -58,7 +63,7 @@
   </section>
   <section class="second-screen">
     <div class="container">
-      <div class="about-event__wrapper">
+      <div class="about-event__wrapper" id="about">
         <div class="about-event__details">
           <h2>O событии</h2>
           <p class="about-event__date">5-6 августа
@@ -79,7 +84,7 @@
   </section>
   <section class="third-screen">
     <div class="container">
-      <div class="stars">
+      <div class="stars" id="stars">
         <div class="stars__wrapper">
           <div class="stars__content">
             <h2 class="stars__title">
@@ -103,69 +108,69 @@
         <div class="swiper-slide">
           <img src="./assets/img/faces/face1.png" alt="face" class="swiper__img">
           <p class="swiper__name">Имя Фамилия</p>
-          <p class="swiper__description little-text">Кто такой?</p>
+          <p class="swiper__description">Кто такой?</p>
         </div>
         <div class="swiper-slide">
           <img src="./assets/img/faces/face2.png" alt="face" class="swiper__img">
           <p class="swiper__name">Имя Фамилия</p>
-          <p class="swiper__description little-text">Кто такой?</p>
+          <p class="swiper__description">Кто такой?</p>
         </div>
         <div class="swiper-slide">
           <img src="./assets/img/faces/face3.png" alt="face" class="swiper__img">
           <p class="swiper__name">Имя Фамилия</p>
-          <p class="swiper__description little-text">Кто такой?</p>
+          <p class="swiper__description">Кто такой?</p>
         </div>
         <div class="swiper-slide">
           <img src="./assets/img/faces/face4.png" alt="face" class="swiper__img">
           <p class="swiper__name">Имя Фамилия</p>
-          <p class="swiper__description little-text">Кто такой?</p>
+          <p class="swiper__description">Кто такой?</p>
         </div>
         <div class="swiper-slide">
           <img src="./assets/img/faces/face2.png" alt="face" class="swiper__img">
           <p class="swiper__name">Имя Фамилия</p>
-          <p class="swiper__description little-text">Кто такой?</p>
+          <p class="swiper__description">Кто такой?</p>
         </div>
         <div class="swiper-slide">
           <img src="./assets/img/faces/face3.png" alt="face" class="swiper__img">
           <p class="swiper__name">Имя Фамилия</p>
-          <p class="swiper__description little-text">Кто такой?</p>
+          <p class="swiper__description">Кто такой?</p>
         </div>
         <div class="swiper-slide">
           <img src="./assets/img/faces/face1.png" alt="face" class="swiper__img">
           <p class="swiper__name">Имя Фамилия</p>
-          <p class="swiper__description little-text">Кто такой?</p>
+          <p class="swiper__description">Кто такой?</p>
         </div>
         <div class="swiper-slide">
           <img src="./assets/img/faces/face2.png" alt="face" class="swiper__img">
           <p class="swiper__name">Имя Фамилия</p>
-          <p class="swiper__description little-text">Кто такой?</p>
+          <p class="swiper__description">Кто такой?</p>
         </div>
         <div class="swiper-slide">
           <img src="./assets/img/faces/face3.png" alt="face" class="swiper__img">
           <p class="swiper__name">Имя Фамилия</p>
-          <p class="swiper__description little-text">Кто такой?</p>
+          <p class="swiper__description">Кто такой?</p>
         </div>
         <div class="swiper-slide">
           <img src="./assets/img/faces/face4.png" alt="face" class="swiper__img">
           <p class="swiper__name">Имя Фамилия</p>
-          <p class="swiper__description little-text">Кто такой?</p>
+          <p class="swiper__description">Кто такой?</p>
         </div>
         <div class="swiper-slide">
           <img src="./assets/img/faces/face2.png" alt="face" class="swiper__img">
           <p class="swiper__name">Имя Фамилия</p>
-          <p class="swiper__description little-text">Кто такой?</p>
+          <p class="swiper__description">Кто такой?</p>
         </div>
         <div class="swiper-slide">
           <img src="./assets/img/faces/face3.png" alt="face" class="swiper__img">
           <p class="swiper__name">Имя Фамилия</p>
-          <p class="swiper__description little-text">Кто такой?</p>
+          <p class="swiper__description">Кто такой?</p>
         </div>
       </div>
     </div>
   </section>
   <section class="fourth-screen">
     <div class="container">
-      <div class="timetable">
+      <div class="timetable" id="timetable">
         <h2 class="timetable__title">Расписание</h2>
         <p class="timetable__subtitle">Смотрите расписание активностей, выбирайте, что нравится, или попробуйте всё.</p>
         <div class="timetable__wrapper">
@@ -416,16 +421,18 @@
   <section class="sixth-screen">
     <div class="container">
       <div class="social-banner">
+        <img src="./assets/img/social-banner-img.png" alt="women" class="social-banner__img-mobile">
         <img src="./assets/img/women.png" alt="women" class="social-banner__img">
         <h2 class="social-banner__title">а ты идешь?</h2>
-          <div class="social-banner__content">
-            <p class="social-banner__text">Подпишись и присоединяйся<br> к комьюнити людей, любящих спорт</p>
-            <div class="social-banner__btns">
-              <button class="social-banner__btn"><img src="./assets/img/telegram.svg" alt="telegram"><a href="https://web.telegram.org/a/">Telegram</a></button>
-              <button class="social-banner__btn"><img src="./assets/img/vk.svg" alt="vkontakte"><a href="https://vk.com/?ysclid=lmhm5h3b26221623608">VKontakte</a></button>
-              </a </div>
-            </div>
+        <div class="social-banner__content">
+          <p class="social-banner__text">Подпишись и присоединяйся<br> к комьюнити людей, любящих спорт</p>
+          <div class="social-banner__btns">
+            <a class="social-banner__btn" href="https://web.telegram.org/a/"><img src="./assets/img/telegram.svg" alt="telegram">Telegram</a>
+            <a class="social-banner__btn" href="https://vk.com/?ysclid=lmhm5h3b26221623608"><img src="./assets/img/vk.svg" alt="vkontakte">VKontakte</a>
           </div>
+        </div>
+      </div>  
+    </div>
   </section>
   <section class="seventh-screen">
     <div class="container">
@@ -444,7 +451,7 @@
           <a href="#"><img src="./assets/img/footer/footer-logo.png" alt="Московский спорт"></a>
           <a href="#"><img src="./assets/img/footer/my-documents.png" alt="Мои документы"></a>
           <a href="#"><img src="./assets/img/footer/healthy-мoscow.png" alt="Здоровая Москва"></a>
-          <a href="#"><img src="./assets/img/footer/world-class-logo-svg-vector 1.png" alt="WorldClass"></a>
+          <a href="#"><img src="./assets/img/footer/world-class-logo-svg-vector.png" alt="WorldClass"></a>
         </div>
         <div class="footer__text">
           <p class="footer__confidentiality-policy">© 2022 «Московский спорт»<span class="circle"></span><a href="">Политика конфиденциальности</a></p>

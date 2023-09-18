@@ -3,6 +3,7 @@
 @import "_vars";
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -36,20 +37,24 @@ img {
 }
 
 .header {
+  display: none;
   background-color: #ffffff;
   &__wrapper {
     max-width: $x4;
     padding: 23px 32px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   &__logos {
-    width: 55%;
+    display: flex;
   }
-  &__logos>img {
+  &__logo {
     padding-right: 36px;
   }
   &__btn {
+    flex-shrink: 0;
+    margin-left: 39px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,24 +77,30 @@ img {
 
 .burger-menu {
   display: none;
-  padding-left: 16px;
+  padding: 18px 0 0 16px;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 20;
   width: 375px;
-  height: 100vw;
+  height: 100vh;
   background: rgba(242, 243, 245, 1);
+  &__logo{
+    display: none;
+  }
   &__list {
     font-family: $text-font;
     font-size: 20px;
     font-weight: 600;
     margin: 19% 0 0 0;
-    // height: 63%;
+  
   }
   &__item {
     margin-bottom: 40px;
     text-transform: uppercase;
+  }
+  &__item > a {
+    color:#141414;
   }
   &__links {
     margin: 35px 0 81px 0;
@@ -393,6 +404,8 @@ h2 {
 .sixth-screen {
   background: $pink;
   position: relative;
+  padding-bottom: 35px;
+  top: 35px;
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
   &:after {
@@ -424,6 +437,7 @@ h2 {
     left: 6%;
     z-index: 2;
   }
+  &__img-mobile{display: none;}
   &__title {
     text-transform: uppercase;
     font-family: $heading-font;
@@ -456,6 +470,7 @@ h2 {
     display: flex;
   }
   &__btn {
+
     background-color: #ffffff;
     color: #141414;
     font-family: $text-font;
@@ -463,7 +478,8 @@ h2 {
     font-size: 13px;
     text-align: center;
     text-transform: uppercase;
-    width: 151px;
+    max-width: 151px;
+    width: 100%;
     padding: 14px 20px;
     border-radius: 32px;
     display: flex;
@@ -483,7 +499,6 @@ h2 {
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   position: relative;
-  top: -35px;
   z-index: 20;
   padding: 77px 0 67px 0;
 }
@@ -593,6 +608,7 @@ h2 {
 
 .swiper__description {
   margin: 0 0 35px 20px;
+  font-size: 16px;
 }
 
 .swiper-button-prev:after,
@@ -709,12 +725,19 @@ h2 {
   }
 }
 
-@media screen and (max-width: $x4) {
+@media screen and (max-width: 768px) {
   .container {
     max-width: $x4;
   }
+  .header {
+    display: block;
+  }
+  .burger-menu{
+    width: 50%;
+  }
   .little-text {
     font-size: 14px;
+    color:  #7E7E80;
   }
   .footer__social-media {
     flex-wrap: wrap;
@@ -725,10 +748,28 @@ h2 {
   .about-event__text {
     max-width: 391px;
   }
+  .banner{
+    max-height: 884px;
+    &__title{}
+    &__img {
+      left: calc(50% - 315px);
+      max-width: 631px;
+    }
+  }
+  .swiper__name{
+font-size: 16px;
+line-height: 19px;
+margin: 16px 0 8px 16px;
+  }
+  .swiper__description{
+    font-size: 14px;
+    margin: 0 0 20px 16px;
+  }
   .timetable {
     padding: 50px 0;
     &__subtitle {
       font-size: 16px;
+      margin-bottom: 32px;
     }
     &__event-info {
       padding: 0;
@@ -737,6 +778,7 @@ h2 {
     }
     &__title {
       font-size: 36px;
+      margin-bottom: 14px;
     }
     &__content {
       width: 100%;
@@ -759,6 +801,7 @@ h2 {
   }
   .social-banner__img {
     max-width: 531px;
+    bottom: 35px;
   }
   .social-banner {
     padding: 300px 0 150px;
@@ -766,9 +809,6 @@ h2 {
   .social-banner__title {
     left: 45%;
     font-size: calc(40px + (16 + 16 *0.7) * ((100vw - 375px) / 500));
-  }
-  .banner__img {
-    max-width: 631px;
   }
 }
 
@@ -781,10 +821,31 @@ h2 {
     width: 42px;
     height: 42px;
   }
-
-  .swiper{
+  .header__wrapper{
+    padding: 18px 16px;
+  }
+  .header__logo{
+    margin-right: 18px;
+  }
+  
+  .swiper {
     padding: 0;
     margin: 20px 0 70px 0;
+    &__name{
+      font-size: 20px;
+      line-height: 24px;
+      margin: 30px 0 10px 20px;
+    }
+    &__description{
+      margin: 0 0 35px 20px;
+      font-size: 16px;
+    } 
+  }
+  .burger-menu{
+    width: 100%;
+    &__logo{
+      display: block;
+    }
   }
   .stars {
     padding: 0;
@@ -796,7 +857,7 @@ h2 {
       font-size: 14px;
       line-height: 21px;
     }
-    &__btns{
+    &__btns {
       display: flex;
       justify-content: space-between;
     }
@@ -806,11 +867,10 @@ h2 {
       line-height: 28px;
       margin: 0;
     }
-    &__text{
+    &__text {
       margin: 20px 0 30px 0;
     }
   }
-
   .swiper__btns {
     margin: 0;
     height: 48px;
@@ -865,15 +925,19 @@ h2 {
     }
   }
   .social-banner {
+    max-height: 556px;
     padding: 391px 0 156px;
+    &__content{
+      left: 16px;
+      bottom: 67px;
+    }
     &__title {
-      left: 2%;
+      left: 16px;
       top: 24px;
     }
     &__text {
-      position: relative;
-      top: -189px;
-      left: -301px;
+      max-width: 270px;
+      margin-bottom: 160px;
     }
     &__btns {
       flex-direction: column;
@@ -881,8 +945,16 @@ h2 {
     &__btn {
       margin-top: 8px;
     }
+    &__img-mobile{
+      display: block;
+      position: relative;
+      right: -16px;
+      bottom: 60px;
+    }
     &__img {
-      left: 15%;
+      display: none;
+      left: 17%;
+      max-width: 494px;
     }
   }
   .seventh-screen {
