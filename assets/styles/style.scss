@@ -12,6 +12,13 @@ body {
   background-color: #f2f3f5;
 }
 
+button {
+  transition: all 0.4s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
 .b-tab {
   display: none;
 }
@@ -487,6 +494,10 @@ h2 {
     align-items: center;
     margin-right: 8px;
     margin-top: 40px;
+    transition: all 0.4s;
+    &:hover {
+      opacity: 0.8;
+    }
     &>a {
       color: black;
     }
@@ -528,8 +539,12 @@ h2 {
     border-radius: 32px;
     text-transform: uppercase;
     color: #ffffff;
+    transition: all 0.4s;
     &>img {
       margin-right: 10px;
+    }
+    &:hover {
+      opacity: 0.7;
     }
   }
   &__sponsors {
@@ -553,6 +568,9 @@ h2 {
       letter-spacing: 0.9px;
       text-transform: uppercase;
       border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+      &:hover {
+        border-bottom: none;
+      }
     }
   }
   &__age {
@@ -718,17 +736,7 @@ h2 {
   .social-banner__text {
     font-size: 16px;
   }
-  .footer__sponsors {
-    padding: 70px 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 142px;
-    grid-row-gap: 50px;
-    &>a {
-      text-align: center;
-    }
-  }
+ 
   .seventh-screen {
     padding: 32px 0 22px 0;
   }
@@ -739,6 +747,17 @@ h2 {
     }
     &__text {
       margin-top: 15px;
+    }
+    &__sponsors {
+      padding: 70px 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 142px;
+      grid-row-gap: 50px;
+      &>a {
+        text-align: center;
+      }
     }
   }
 }
