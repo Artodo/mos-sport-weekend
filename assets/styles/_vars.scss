@@ -1,0 +1,21 @@
+$pink: #FF0A33;
+$grey: #F2F3F5;
+
+$xl: 1420px;
+$x2: 1200px;
+$x3: 992px;
+$x4: 768px;
+$x5: 576px;
+
+$text-font: 'TT Hoves',
+sans-serif;
+$heading-font: 'DrukTextWideCyr',
+sans-serif;
+
+@mixin pink {
+  color: $pink;
+}
+
+@mixin bgpink {
+  background: $pink;
+}
