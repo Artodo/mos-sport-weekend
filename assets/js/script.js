@@ -3,7 +3,6 @@ const menuBtn = document.querySelector('#burgerBtn');
 const menu = document.querySelector('#burgerMenu');
 const body = document.body;
 
-
 function closeBurgerMenu() {
   menuBtn.classList.remove('burger_btn-active');
   menu.classList.remove('active');
@@ -27,6 +26,7 @@ body.addEventListener('click', function (e) {
   }
 })
 
+
 const anchors = document.querySelectorAll('.burger-menu__item');
 
 anchors.forEach(anchor => {
@@ -36,64 +36,49 @@ anchors.forEach(anchor => {
   })
 })
 
-console.log("Hi");
 
 const swiper = new Swiper('.swiper', {
   loop: true,
-  slidesPerView: 4.5,
-  spaceBetween: 20,
-  
+  slidesPerView: 1,
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  
 
   breakpoints: {
-    320:{
-      slidesPerView: 1
+    320: {
+      slidesPerView: 1,
     },
     576: {
+      slidesPerView: 2,
+      spaceBetween: 14
+    },
+    744: {
       slidesPerView: 3,
       spaceBetween: 14
     },
-  
     992: {
       slidesPerView: 4,
       spaceBetween: 14
+    },
+    1420: {
+      slidesPerView: 4.5,
+      spaceBetween: 14,
     }
   }
 
 });
 
 
-// breakpoints: {
-//   // when window width is >= 320px
-//   320: {
-//     slidesPerView: 2,
-//     spaceBetween: 20
-//   },
-//   // when window width is >= 480px
-//   480: {
-//     slidesPerView: 3,
-//     spaceBetween: 30
-//   },
-//   // when window width is >= 640px
-//   640: {
-//     slidesPerView: 4,
-//     spaceBetween: 40
-//   }
-// }
-
-
 
 function handleTabClick(tab) {
-removeActiveFromTabs();
+  removeActiveFromTabs();
 
-tab.classList.add('active');
+  tab.classList.add('active');
 
-const contentId = tab.getAttribute('data-tab');
-document.getElementById(contentId).classList.add('active');
+  const contentId = tab.getAttribute('data-tab');
+  document.getElementById(contentId).classList.add('active');
 }
 
 
