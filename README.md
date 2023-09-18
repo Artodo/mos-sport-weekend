@@ -1,1 +1,1 @@
-# mos-sport-weekend
+https://artodo.github.io/mos-sport-weekend/
