@@ -794,12 +794,12 @@ h2 {
   .about-event__time {
     font-size: 16px;
   }
-  h2 {
-    font-size: 36px;
-  }
   .about-event__text {
     font-size: 16px;
     padding-top: 0;
+  }
+  h2 {
+    font-size: 36px;
   }
   .timetable__tabs {
     flex-direction: row;
@@ -1048,6 +1048,7 @@ h2 {
   .stars__btns {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
   }
   .stars__btn {
     padding: 10px 20px;
